@@ -52,7 +52,7 @@ The schematic is drawn in KiCad. The motor is a separate block, because it is po
 
 ## Mechanical design
 
-The model is made in Onshape  (STEP and STL files are in the `cad/` folder).
+The model is made in Onshape 
 Onshape link: https://cad.onshape.com/documents/4df1f19cbef029885b42195c/w/202e8609e3d3d323b0620ab0/e/e5f794b9e71c9bec7b36c113
 
 <img width="1319" height="853" alt="image" src="https://github.com/user-attachments/assets/4607846a-345e-4803-b16e-0738d93b25b0" />
@@ -80,7 +80,7 @@ The arm (240 x 38 x 4 mm) is one part with a hub that sits on the 3 mm shaft.
 <img width="1540" height="930" alt="Zrzut ekranu 2026-10-31 160210" src="https://github.com/user-attachments/assets/2eace092-f801-49f0-bd61-b78694b8bce0" />
 
 
-The arm is 240 mm long and does not fit on my printer bed, so it will be cut into two halves and joined with screws at the hub.
+The arm is 240 mm long and does not fit on my printer bed, so it will be cut into two halves and joined at the hub.
 
 ### Hall sensor and magnet
 
@@ -116,14 +116,13 @@ The speed grows almost linearly with the voltage, about 800 rpm per volt. For th
 | [`schematic/POV.pdf`](schematic/POV.pdf) | PDF export of the schematic |
 | [`cad/STEP/Part Studio 1.step`](cad/STEP/Part%20Studio%201.step) | Complete CAD model in STEP format (motor, bracket and arm) |
 | [`cad/STEP/`](cad/STEP/) | The same parts as separate STEP files: `arm`, `bracket`, `motor` |
-| [`cad/STL/arm.stl`](cad/STL/arm.stl), [`cad/STL/bracket.stl`](cad/STL/bracket.stl) | Parts to print. The arm is 240 mm long, so it has to be cut into two halves before printing |
+| [`cad/STL/arm.stl`](cad/STL/arm.stl), [`cad/STL/bracket.stl`](cad/STL/bracket.stl) | Parts to print. |
 | [`cad/STL/motor.stl`](cad/STL/motor.stl), [`cad/STL/Part Studio 1.stl`](cad/STL/Part%20Studio%201.stl) | Reference only (motor model and the whole assembly), not meant for printing |
-| [`firmware/spinpov/spinpov.ino`](firmware/spinpov/spinpov.ino) | ESP32 firmware (AI-assisted first draft, compiles, untested on hardware) |
+| [`firmware/spinpov/spinpov.ino`](firmware/spinpov/spinpov.ino) | ESP32 firmware (first draft, compiles, untested on hardware) |
 | [`BOM.csv`](BOM.csv) | Bill of materials: parts, prices and vendors for the Half Life funding |
 | [`JOURNAL.md`](JOURNAL.md) | Development journal mirrored from Half Life |
 | [`LICENSE`](LICENSE) | License |
 
-To inspect the electronics design, open `schematic/POV.kicad_pro` in KiCad.
 
 ## Progress
 
@@ -131,7 +130,8 @@ To inspect the electronics design, open `schematic/POV.kicad_pro` in KiCad.
 - [x] KiCad schematic
 - [x] Onshape model (motor, wall bracket, arm with holders for ESP32, battery, magnet and sensor)
 - [x] Motor speed test on the bench
+- [ ] Firmware: first draft (compiles, not tested on hardware yet)
 - [ ] Order the parts (before week 9)
-- [ ] Build (week 9): print the bracket and the arm , assemble, balance
-- [ ] Firmware: column timing, image format, first test image
+- [ ] Build (week 9): print the bracket and the arm , assemble, balance\
+- [ ] Firmware: test on the real display 
 - [ ] Optional: change the image over Bluetooth/Wi-Fi
