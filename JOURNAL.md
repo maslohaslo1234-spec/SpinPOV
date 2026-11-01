@@ -10,7 +10,7 @@
 
 | Week | Tier | Hours logged | Entries |
 | --- | --- | --- | --- |
-| Week 4 | Tier 1 | 8.17h | 2 |
+| Week 4 | Tier 1 | 8.92h | 2 |
 
 ## Contents
 
@@ -75,7 +75,7 @@ I made a short idea reel without talking, using on-screen captions and time laps
 
 ### 2026-10-31: ## Week 4, Entry 2: CAD in Onshape, wall mount and balancing
 
-**4.17h**
+**4.92h**
 
 ## Week 4, Entry 2: CAD in Onshape, wall mount and balancing
 
@@ -129,7 +129,7 @@ The arm will spin fast, so it must be balanced. I used the rule: mass x distance
 - The first idea for zip tie slots made the ties cross the LED strip and cover LEDs. I changed the slots, so the ties run along the arm, next to the strip.
 - I noticed that 144 LED/m strips are about 12-13 mm wide, so my first LED pocket (10.5 mm) was too narrow. I changed the pocket to 13.5mm.
 
-### Motor speed test (0.5h)
+### Motor speed test (time: 0.5 h)
 
 I tested the motor with a bench power supply, an IR sensor and the ESP32, which counted the revolutions. The speed without any load was:
 
@@ -167,8 +167,9 @@ I rewrote the README in my GitHub repository, so that someone who has never seen
 - the mechanical design: the wall bracket, the arm, the Hall sensor with the magnet and the balancing,
 - the motor speed test with the table of results,
 - safety notes and a progress checklist.
+- a project files table
 
-### 11. Firmware (time: 0.25 h)
+### 11. Firmware (time: 0.5 h)
 
 I wrote the first version of the firmware in the Arduino IDE (`firmware/spinpov/spinpov.ino` in the repo). The Hall sensor gives one pulse per revolution, and the code measures the time of the revolution. Then it turns the time since the last pulse into a column number (0-119) and sends that column to the APA102 strip over SPI. All columns are prepared in advance, so the loop only sends bytes. If the pulses stop, the LEDs switch off.
 
@@ -178,13 +179,15 @@ The code compiles without errors for the ESP32 Dev Module. I have not tested it 
 
 ![Zrzut ekranu 2026-10-31 211200](https://halflife.hackclub-assets.com/sessions/D1H5wjMaoqfsZfeTslugwWB4nIQcEzNR/36ec0adda2897ef9e85a773e22b30abe4e5c7599d76ed0502f785ba53802a50e.png)
 
-### 12.      5h progress reel (time: ___ h)
+### 12.      5h progress reel (time: 0.5 h)
 
-_TODO: I will describe here how I made the 5h progress reel (what it shows)._
+I made the progress reel using CAD timelapse and capitions in capcut.
+
+![image](https://halflife.hackclub-assets.com/sessions/D1H5wjMaoqfsZfeTslugwWB4nIQcEzNR/584a30c7732a9cbe098f24426a0e1334f44717b6a395d858e495ce205a633820.png)
 
 ### Next
 
 1. Submit the week.
-2. After the grant: order the parts. Then (week 9) print the bracket and the arm (the arm has to be cut into two halves, because it does not fit on my printer bed), assemble, balance, and test the firmware on the real display.
+2. After the grant order the parts. Then (week 9) print the bracket and the arm (the arm has to be cut into two halves, because it does not fit on my printer bed), assemble, balance, and test the firmware on the real display.
 
 [Timelapse](https://lookout.hackclub.com/api/media/5ced48e2-893a-4305-a44e-ad613d181379/video.mp4)
