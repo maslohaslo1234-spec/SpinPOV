@@ -107,6 +107,24 @@ The speed grows almost linearly with the voltage, about 800 rpm per volt. For th
 - Set the MT3608 to 5 V with a multimeter before connecting it to the ESP32.
 - Switch the rotor off before connecting USB to the ESP32, so that the USB and the boost module do not power the VIN pin at the same time.
 
+## Project files
+
+| Path | Description |
+|---|---|
+| [`schematic/POV.kicad_pro`](schematic/POV.kicad_pro) | KiCad project file |
+| [`schematic/POV.kicad_sch`](schematic/POV.kicad_sch) | Electronic schematic (ESP32, APA102 strip, Hall sensor, battery with switch, boost module, motor block) |
+| [`schematic/POV.pdf`](schematic/POV.pdf) | PDF export of the schematic |
+| [`cad/STEP/Part Studio 1.step`](cad/STEP/Part%20Studio%201.step) | Complete CAD model in STEP format (motor, bracket and arm) |
+| [`cad/STEP/`](cad/STEP/) | The same parts as separate STEP files: `arm`, `bracket`, `motor` |
+| [`cad/STL/arm.stl`](cad/STL/arm.stl), [`cad/STL/bracket.stl`](cad/STL/bracket.stl) | Parts to print. The arm is 240 mm long, so it has to be cut into two halves before printing |
+| [`cad/STL/motor.stl`](cad/STL/motor.stl), [`cad/STL/Part Studio 1.stl`](cad/STL/Part%20Studio%201.stl) | Reference only (motor model and the whole assembly), not meant for printing |
+| [`firmware/spinpov/spinpov.ino`](firmware/spinpov/spinpov.ino) | ESP32 firmware (AI-assisted first draft, compiles, untested on hardware) |
+| [`BOM.csv`](BOM.csv) | Bill of materials: parts, prices and vendors for the Half Life funding |
+| [`JOURNAL.md`](JOURNAL.md) | Development journal mirrored from Half Life |
+| [`LICENSE`](LICENSE) | License |
+
+To inspect the electronics design, open `schematic/POV.kicad_pro` in KiCad.
+
 ## Progress
 
 - [x] Concept and parts selection
